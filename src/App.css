@@ -81,3 +81,15 @@ body {
 .drivers-swiper .swiper-pagination {
 	bottom: 0 !important;
 }
+
+.reviews-swiper .swiper-pagination-bullet-active {
+	background-color: #4640de;
+}
+
+.reviews-swiper .swiper-wrapper {
+	margin-bottom: 40px;
+}
+
+.reviews-swiper .swiper-pagination {
+	bottom: 0 !important;
+}

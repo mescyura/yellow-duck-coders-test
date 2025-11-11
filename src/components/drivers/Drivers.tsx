@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import ava from '../../assets/ava.png';
 import { InstagramIcon, LinkedinIcon } from '../../ui/svg';
 
@@ -72,10 +72,6 @@ function Drivers() {
 							slidesPerView: 5,
 							spaceBetween: 24,
 						},
-						// 1536: {
-						// 	slidesPerView: 5,
-						// 	spaceBetween: 24,
-						// },
 					}}
 					className='drivers-swiper'
 				>
@@ -112,14 +108,14 @@ function Drivers() {
 										className='text-[#515B6F] hover:text-[#4640DE] transition-colors'
 										aria-label='Instagram'
 									>
-										<InstagramIcon />
+										<InstagramIcon opacity={0.5} />
 									</a>
 									<a
 										href='#'
 										className='text-[#515B6F] hover:text-[#4640DE] transition-colors'
 										aria-label='LinkedIn'
 									>
-										<LinkedinIcon />
+										<LinkedinIcon opacity={0.5} />
 									</a>
 								</div>
 							</div>
