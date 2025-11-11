@@ -115,7 +115,7 @@ function Footer() {
 					</div>
 					<div className='shrink-0'>
 						<h3 className='font-bold text-lg mb-4'>Зворотній зв'язок</h3>
-						<p className='text-sm text-gray-300 mb-4'>
+						<p className='text-sm text-gray-300 mb-4 text-wrap'>
 							Маєш пропозиції щодо покращення сервісу - пиши нам!
 						</p>
 						<form onSubmit={handleSubmit} className='mb-6'>
@@ -125,7 +125,7 @@ function Footer() {
 									value={email}
 									onChange={e => setEmail(e.target.value)}
 									placeholder='Email Address'
-									className='flex-1 px-4 py-2 bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#4640DE]'
+									className='px-4 py-2 bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#4640DE]'
 									required
 								/>
 								<button

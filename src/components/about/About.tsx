@@ -23,8 +23,8 @@ function About() {
 	return (
 		<section className='bg-white py-16'>
 			<div className='container mx-auto px-4'>
-				<div className='flex flex-col md:flex-row gap-8'>
-					<div className='flex-1 max-w-[750px]'>
+				<div className='flex flex-col [@media(min-width:890px)]:flex-row gap-8'>
+					<div className='flex-1 [@media(min-width:890px)]:max-w-[750px]'>
 						<div className='mb-10'>
 							<h2 className='lato text-3xl leading-tight font-bold text-[#25324B] mb-4'>
 								Опис перевізника
@@ -89,8 +89,8 @@ function About() {
 						</div>
 					</div>
 
-					<div className='shrink-0'>
-						<div className='mb-8'>
+					<div className='flex flex-col md:flex-row justify-between gap-6 shrink-0 [@media(min-width:890px)]:flex-col [@media(min-width:890px)]:justify-start'>
+						<div >
 							<h2 className='lato text-3xl leading-tight font-bold text-[#25324B] mb-6'>
 								Обслуговуємо країни
 							</h2>

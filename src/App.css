@@ -56,6 +56,7 @@ body {
 	max-width: 1224px;
 }
 
+
 #hero:before {
 	content: '';
 	position: absolute;
@@ -80,9 +81,10 @@ body {
 	width: 250px;
 	background-image: url(./assets/hero-right.png);
 	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: top;
+	background-size: contain;
+	background-position: left bottom;
 }
+
 
 #reviews:before {
 	content: '';
@@ -109,6 +111,8 @@ body {
 	background-repeat: no-repeat;
 	background-position: bottom;
 }
+
+
 
 .activeLink {
 	position: relative;
