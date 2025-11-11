@@ -38,7 +38,6 @@ function Service() {
 	return (
 		<section className='bg-white py-12'>
 			<div className='container mx-auto px-4'>
-				{/* Header */}
 				<div className='mb-8'>
 					<h2 className='lato text-3xl lg:text-4xl font-bold text-[#25324B] mb-2'>
 						Сервіс
@@ -47,9 +46,7 @@ function Service() {
 						Найкращі умови для вашого комфорту
 					</p>
 				</div>
-
-				{/* Services Grid */}
-				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2'>
+				<div className='grid gap-4 grid-cols-1 md:grid-cols-[repeat(3,fit-content(100%))] lg:grid-cols-[repeat(6,fit-content(100%))]'>
 					{services.map((service, index) => {
 						const IconComponent = service.icon;
 						return (

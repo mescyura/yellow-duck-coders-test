@@ -10,6 +10,41 @@ export default function Calendar() {
 				<DateCalendar
 					showDaysOutsideCurrentMonth
 					dayOfWeekFormatter={date => dayjs(date).format('ddd')}
+					sx={{
+						'& .MuiPickersCalendarHeader-label': {
+							color: '#4640DE',
+							fontWeight: 700,
+							fontSize: '1rem',
+						},
+						'& .MuiPickersArrowSwitcher-button': {
+							color: '#4640DE',
+						},
+						'& .MuiPickersDay-root.Mui-selected': {
+							backgroundColor: '#4640DE !important',
+							color: '#fff',
+							fontWeight: 600,
+							'&:hover': {
+								backgroundColor: '#4640DE !important',
+							},
+						},
+						'& .MuiPickersDay-today': {
+							border: '1px solid #4640DE',
+						},
+						'& .MuiPickersMonth-root.Mui-selected': {
+							backgroundColor: '#4640DE !important',
+							color: '#fff',
+							'&:hover': {
+								backgroundColor: '#4640DE !important',
+							},
+						},
+						'& .MuiPickersYear-root.Mui-selected': {
+							backgroundColor: '#4640DE !important',
+							color: '#fff',
+							'&:hover': {
+								backgroundColor: '#4640DE !important',
+							},
+						},
+					}}
 					slotProps={{
 						day: {
 							sx: {
@@ -17,11 +52,12 @@ export default function Calendar() {
 									color: 'grey',
 									opacity: 0.6,
 								},
-                            },
-                           
+								'&:hover': {
+									backgroundColor: 'rgba(70, 64, 222, 0.1)',
+								},
+								transition: 'all 0.2s ease',
+							},
 						},
-						leftArrowIcon: { sx: { color: '#4640DE' } },
-						rightArrowIcon: { sx: { color: '#4640DE' } },
 					}}
 				/>
 			</div>

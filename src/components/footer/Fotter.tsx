@@ -15,7 +15,6 @@ function Footer() {
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
-		// Handle form submission
 		console.log('Email submitted:', email);
 		setEmail('');
 	};
@@ -23,9 +22,7 @@ function Footer() {
 	return (
 		<footer className='bg-[#202430] text-white py-12'>
 			<div className='container mx-auto px-4'>
-				{/* Main Content */}
 				<div className='flex flex-col md:flex-row justify-between gap-8 mb-8'>
-					{/* Left Column - Logo and Description */}
 					<div className='lg:col-span-1'>
 						<a href='./' className='mb-4'>
 							<img src={footerLogo} alt='Sprinters' className='w-40 mb-10' />
@@ -34,8 +31,6 @@ function Footer() {
 							Платформа пошуку перевізників та бронювання поїздок
 						</p>
 					</div>
-
-					{/* Middle-Left Column - Клієнтам */}
 					<div>
 						<h3 className='font-bold text-lg mb-4'>Клієнтам</h3>
 						<ul className='space-y-2'>
@@ -81,8 +76,6 @@ function Footer() {
 							</li>
 						</ul>
 					</div>
-
-					{/* Middle-Right Column - Перевізникам */}
 					<div>
 						<h3 className='font-bold text-lg mb-4'>Перевізникам</h3>
 						<ul className='space-y-2'>
@@ -120,8 +113,6 @@ function Footer() {
 							</li>
 						</ul>
 					</div>
-
-					{/* Right Column - Зворотній зв'язок */}
 					<div className='shrink-0'>
 						<h3 className='font-bold text-lg mb-4'>Зворотній зв'язок</h3>
 						<p className='text-sm text-gray-300 mb-4'>
@@ -157,12 +148,10 @@ function Footer() {
 						</div>
 					</div>
 				</div>
-
-				{/* Bottom Section - Copyright and Social Media */}
 				<div className='border-t border-gray-600 pt-8'>
 					<div className='flex flex-col md:flex-row justify-between items-center gap-4'>
 						<p className='text-white/50 text-sm'>
-							2024 @ Sprinters. All rights reserved.
+							{new Date().getFullYear()} @ Sprinters. All rights reserved.
 						</p>
 						<div className='flex gap-4'>
 							<a

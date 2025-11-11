@@ -472,7 +472,7 @@ export const InstagramIcon = ({
 	className?: string;
 	width?: number;
 	height?: number;
-		color?: string;
+	color?: string;
 	opacity?: number;
 }) => {
 	return (
@@ -538,7 +538,7 @@ export const LinkedinIcon = ({
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'
 		>
-			<g opacity={opacity}  clipPath='url(#clip0_31135_857)'>
+			<g opacity={opacity} clipPath='url(#clip0_31135_857)'>
 				<path
 					d='M18 4H6C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4Z'
 					stroke={color}

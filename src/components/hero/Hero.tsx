@@ -36,7 +36,6 @@ function Hero() {
 					</nav>
 				</div>
 				<div className='flex flex-col md:flex-row items-center gap-6'>
-					{/* Left side - Large Truck Icon */}
 					<div className='shrink-0 mr-auto'>
 						<img
 							src={carImage}

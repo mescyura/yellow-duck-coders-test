@@ -36,14 +36,12 @@ function Reviews() {
 	];
 
 	return (
-		<section className='bg-[#F8F7FF] py-16 relative overflow-hidden'>
-			{/* Decorative elements */}
-			<div className='parallelogram rotate-[-30deg] bottom-[-160px] right-[-200px]'></div>
-			<div className='parallelogram rotate-[-30deg] top-[-360px] right-[-50px]'></div>
-
+		<section
+			id='reviews'
+			className='bg-[#F8F7FF] py-16 relative overflow-hidden'
+		>
 			<div className='container mx-auto px-4 relative z-10'>
 				<div className='flex flex-col lg:flex-row gap-12 justify-between'>
-					{/* Left Section - Header */}
 					<div className='lg:w-[35%]'>
 						<h2 className='lato text-4xl lg:text-5xl font-bold mb-4'>
 							<span className='text-[#25324B]'>Що</span>{' '}
@@ -59,8 +57,6 @@ function Reviews() {
 							Залишити відгук
 						</button>
 					</div>
-
-					{/* Right Section - Reviews Swiper */}
 					<div className='lg:w-[60%] w-full'>
 						<Swiper
 							modules={[Pagination]}
@@ -87,7 +83,6 @@ function Reviews() {
 							{reviews.map((review, index) => (
 								<SwiperSlide key={index} className='w-auto !h-auto'>
 									<div className='flex flex-col bg-white rounded-lg shadow-sm px-5 pb-5 pt-8 min-w-[280px] h-full'>
-										{/* Header */}
 										<div className='flex items-start gap-4 mb-4'>
 											<img
 												src={ava}
@@ -98,19 +93,15 @@ function Reviews() {
 												<h3 className='font-bold text-[#25324B] mb-1'>
 													{review.name}
 												</h3>
-												<p className='text-sm text-[#515B6F] mb-1'>
+												<p className='text-sm text-[#4640DE] font-medium mb-1'>
 													{review.route}
 												</p>
 												<p className='text-xs text-[#515B6F]'>{review.date}</p>
 											</div>
 										</div>
-
-										{/* Review Text */}
 										<p className='text-[#515B6F] mb-4 leading-relaxed h-full'>
 											{review.text}
 										</p>
-
-										{/* Rating */}
 										<div className='flex gap-1'>
 											{Array.from({ length: review.rating }).map((_, i) => (
 												<StarIcon key={i} />

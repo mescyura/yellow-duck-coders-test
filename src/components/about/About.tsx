@@ -24,9 +24,7 @@ function About() {
 		<section className='bg-white py-16'>
 			<div className='container mx-auto px-4'>
 				<div className='flex flex-col md:flex-row gap-8'>
-					{/* Left Column - Main Content */}
 					<div className='flex-1 max-w-[750px]'>
-						{/* Опис перевізника */}
 						<div className='mb-10'>
 							<h2 className='lato text-3xl leading-tight font-bold text-[#25324B] mb-4'>
 								Опис перевізника
@@ -48,7 +46,6 @@ function About() {
 							</p>
 						</div>
 
-						{/* Соціальні мережі */}
 						<div className='mb-10'>
 							<h2 className='lato text-3xl leading-tight font-bold text-[#25324B] mb-4'>
 								Ми у соц. мережах
@@ -73,7 +70,6 @@ function About() {
 							</div>
 						</div>
 
-						{/* Галерея зображень */}
 						<div className='space-y-4'>
 							<img
 								src={car1}
@@ -93,9 +89,7 @@ function About() {
 						</div>
 					</div>
 
-					{/* Right Column - Sidebar */}
 					<div className='shrink-0'>
-						{/* Обслуговуємо країни */}
 						<div className='mb-8'>
 							<h2 className='lato text-3xl leading-tight font-bold text-[#25324B] mb-6'>
 								Обслуговуємо країни
