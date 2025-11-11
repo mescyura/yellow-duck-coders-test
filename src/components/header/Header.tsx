@@ -1,59 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import logo from '../../assets/logo.svg';
 
 export default function Header() {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-	const [activeLink, setActiveLink] = useState('');
-	const [hoveredLink, setHoveredLink] = useState('');
-
-	useEffect(() => {
-		const handleHashChange = () => {
-			const hash = window.location.hash;
-			setActiveLink(hash);
-		};
-
-		// Встановлюємо початковий активний лінк
-		handleHashChange();
-
-		// Слухаємо зміни hash
-		window.addEventListener('hashchange', handleHashChange);
-		// Також слухаємо зміни URL (для випадків, коли використовується router)
-		window.addEventListener('popstate', handleHashChange);
-
-		return () => {
-			window.removeEventListener('hashchange', handleHashChange);
-			window.removeEventListener('popstate', handleHashChange);
-		};
-	}, []);
 
 	const toggleMobileMenu = () => {
 		setIsMobileMenuOpen(!isMobileMenuOpen);
-	};
-
-	const isLinkActive = (href: string) => {
-		// Витягуємо id з href (все після #)
-		const linkId = href.includes('#') ? href.split('#')[1] : '';
-
-		// Для головної сторінки (./ або без hash)
-		if (href === './' || !linkId) {
-			return activeLink === '' || !activeLink;
-		}
-
-		// Для інших посилань перевіряємо, чи hash в URL містить id лінка
-		const currentHash = activeLink.replace('#', '');
-		return currentHash === linkId;
-	};
-
-	const getLinkClassName = (href: string) => {
-		const baseClasses =
-			'text-[#515B6F] hover:text-[#4640DE] transition-colors pt-6 pb-7';
-		const isActive = isLinkActive(href);
-		const isHovered = hoveredLink === href;
-
-		if (isActive || isHovered) {
-			return `${baseClasses} activeLink`;
-		}
-		return baseClasses;
 	};
 
 	return (
@@ -68,33 +20,25 @@ export default function Header() {
 						<nav className='hidden mobile-menu-visible items-center gap-6 font-semibold'>
 							<a
 								href='./'
-								className={getLinkClassName('./')}
-								onMouseEnter={() => setHoveredLink('./#hero')}
-								onMouseLeave={() => setHoveredLink('')}
+								className='text-[#515B6F] hover:text-[#4640DE] transition-colors pt-6 pb-7'
 							>
 								Головна
 							</a>
 							<a
 								href='./#transporters'
-								className={getLinkClassName('./#transporters')}
-								onMouseEnter={() => setHoveredLink('./#transporters')}
-								onMouseLeave={() => setHoveredLink('')}
+								className='text-[#515B6F] hover:text-[#4640DE] transition-colors pt-6 pb-7'
 							>
 								Перевізникам
 							</a>
 							<a
 								href='./#about'
-								className={getLinkClassName('./#about')}
-								onMouseEnter={() => setHoveredLink('./#about')}
-								onMouseLeave={() => setHoveredLink('')}
+								className='text-[#515B6F] hover:text-[#4640DE] transition-colors pt-6 pb-7'
 							>
 								Про нас
 							</a>
 							<a
 								href='./#transporter-profile'
-								className={getLinkClassName('./#transporter-profile')}
-								onMouseEnter={() => setHoveredLink('./#transporter-profile')}
-								onMouseLeave={() => setHoveredLink('')}
+								className='text-[#515B6F] hover:text-[#4640DE] transition-colors pt-6 pb-7 activeLink'
 							>
 								Профіль перевізника
 							</a>
@@ -141,53 +85,29 @@ export default function Header() {
 						<nav className='flex flex-col gap-4'>
 							<a
 								href='./'
-								className={`text-gray-700 hover:text-[#4640DE] transition-colors py-2 ${
-									isLinkActive('./') || hoveredLink === './' ? 'activeLink' : ''
-								}`}
+								className='text-gray-700 hover:text-[#4640DE] transition-colors py-2'
 								onClick={() => setIsMobileMenuOpen(false)}
-								onMouseEnter={() => setHoveredLink('./#hero')}
-								onMouseLeave={() => setHoveredLink('')}
 							>
 								Головна
 							</a>
 							<a
 								href='./#transporters'
-								className={`text-gray-700 hover:text-[#4640DE] transition-colors py-2 ${
-									isLinkActive('./#transporters') ||
-									hoveredLink === './#transporters'
-										? 'activeLink'
-										: ''
-								}`}
+								className='text-gray-700 hover:text-[#4640DE] transition-colors py-2'
 								onClick={() => setIsMobileMenuOpen(false)}
-								onMouseEnter={() => setHoveredLink('./#transporters')}
-								onMouseLeave={() => setHoveredLink('')}
 							>
 								Перевізникам
 							</a>
 							<a
 								href='./#about'
-								className={`text-gray-700 hover:text-[#4640DE] transition-colors py-2 ${
-									isLinkActive('./#about') || hoveredLink === './#about'
-										? 'activeLink'
-										: ''
-								}`}
+								className='text-gray-700 hover:text-[#4640DE] transition-colors py-2'
 								onClick={() => setIsMobileMenuOpen(false)}
-								onMouseEnter={() => setHoveredLink('./#about')}
-								onMouseLeave={() => setHoveredLink('')}
 							>
 								Про нас
 							</a>
 							<a
 								href='./#transporter-profile'
-								className={`text-gray-700 hover:text-[#4640DE] transition-colors py-2 ${
-									isLinkActive('./#transporter-profile') ||
-									hoveredLink === './#transporter-profile'
-										? 'activeLink'
-										: ''
-								}`}
+								className='text-gray-700 hover:text-[#4640DE] transition-colors py-2 activeLink'
 								onClick={() => setIsMobileMenuOpen(false)}
-								onMouseEnter={() => setHoveredLink('./#transporter-profile')}
-								onMouseLeave={() => setHoveredLink('')}
 							>
 								Профіль перевізника
 							</a>
