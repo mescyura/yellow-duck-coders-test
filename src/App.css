@@ -93,3 +93,14 @@ body {
 .reviews-swiper .swiper-pagination {
 	bottom: 0 !important;
 }
+
+.parallelogram {
+	position: absolute;
+	z-index: 1;
+	width: 780px;
+	height: 320px;
+	background-color: transparent;
+	border: 4px solid #CCCCF5;
+	transform: skewX(-30deg);
+
+}

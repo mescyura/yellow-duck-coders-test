@@ -38,8 +38,8 @@ function Reviews() {
 	return (
 		<section className='bg-[#F8F7FF] py-16 relative overflow-hidden'>
 			{/* Decorative elements */}
-			<div className='absolute top-0 right-0 w-64 h-64 bg-purple-100 opacity-30 rounded-full blur-3xl'></div>
-			<div className='absolute bottom-0 right-0 w-64 h-64 bg-purple-100 opacity-30 rounded-full blur-3xl'></div>
+			<div className='parallelogram rotate-[-30deg] bottom-[-160px] right-[-200px]'></div>
+			<div className='parallelogram rotate-[-30deg] top-[-360px] right-[-50px]'></div>
 
 			<div className='container mx-auto px-4 relative z-10'>
 				<div className='flex flex-col lg:flex-row gap-12 justify-between'>
@@ -50,9 +50,10 @@ function Reviews() {
 							<span className='text-[#4640DE]'>кажуть люди?</span>
 						</h2>
 						<p className='text-[#515B6F] mb-8 leading-relaxed'>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-							enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+							enim ad minim veniam, quis nostrud exercitation ullamco laboris
+							nisi ut aliquip ex ea commodo consequat.
 						</p>
 						<button className='bg-[#4640DE] text-white px-8 py-4 rounded-md hover:opacity-90 transition-opacity font-medium'>
 							Залишити відгук

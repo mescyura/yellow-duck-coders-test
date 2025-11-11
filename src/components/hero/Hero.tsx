@@ -1,4 +1,3 @@
-import bgImage from '../../assets/bg.png';
 import carImage from '../../assets/car.png';
 import {
 	PlanetIcon,
@@ -15,12 +14,6 @@ function Hero() {
 		<section
 			id='hero'
 			className='relative bg-[#F8F7FF] pt-32 pb-20 overflow-hidden'
-			style={{
-				backgroundImage: `url(${bgImage})`,
-				backgroundSize: 'cover',
-				backgroundPosition: 'left',
-				backgroundRepeat: 'no-repeat',
-			}}
 		>
 			<div className='container mx-auto px-4 relative z-10'>
 				<div className='mb-10'>
